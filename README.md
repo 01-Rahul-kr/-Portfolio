@@ -1,69 +1,164 @@
-# CodeIgniter 4 Application Starter
+# 🚀 Rahul Kumar - Developer Portfolio & Admin Control Panel
 
-## What is CodeIgniter?
+A state-of-the-art, dynamic personal portfolio website and full-featured Admin Control Panel built with **CodeIgniter 4**, **PHP 8.2+**, **MySQL**, **Bootstrap 5**, and a custom **Dual-Theme Glassmorphism UI System** (Dark & Light Modes).
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+![PHP](https://img.shields.io/badge/PHP-8.2%2B-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![CodeIgniter](https://img.shields.io/badge/CodeIgniter-4.x-EF4223?style=for-the-badge&logo=codeigniter&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-8.0%2B-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
+![Theme](https://img.shields.io/badge/Theme-Dark%20%26%20Light-6366F1?style=for-the-badge)
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+---
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+## ✨ Key Features
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+### 🌐 Public Portfolio Website
+- **Sleek Dual-Theme Design**: Toggle seamlessly between high-contrast **Dark Mode** (Midnight Obsidian `#070A11`) and **Light Mode** (Pearl White `#F8FAFC`).
+- **Glassmorphism Aesthetic**: Modern translucent card surfaces (`backdrop-filter: blur(20px)`) with crisp borders and glowing shadows.
+- **Dynamic Content**:
+  - **Hero Section**: Typed role animations, experience badge, bio, and CTA buttons.
+  - **About Section**: Professional summary, key attributes, and quick details.
+  - **Skills Showcase**: Categorized technical skills (PHP, CodeIgniter 4, MySQL, Bootstrap, JS) with animated progress bars.
+  - **Work Experience & Education**: Vertical timeline layout for career milestones and academic qualifications.
+  - **Projects Showcase**: Filterable portfolio grid with project links, tech stack badges, and screenshots.
+  - **Services Offered**: Card grid highlighting key development services.
+  - **Interactive Contact Form**: Real-time AJAX submission with database storage and client validation.
+  - **Resume Management**: Instant PDF download link synced with admin panel uploads.
 
-## Installation & updates
+---
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+### 🛡️ Admin Control Panel
+- **Secure Authentication**: Protected dashboard routes, password hashing (`PASSWORD_DEFAULT`), and CSRF token verification.
+- **Interactive Photo Cropping**: Built-in **Cropper.js** frontend modal allowing admins to zoom, rotate, and crop photos (Avatar `1:1`, Hero/About `1:1`, Projects `16:10`) before uploading.
+- **Server-Side Auto-Resizing**: Integrated PHP GD Image Service (`\Config\Services::image('gd')`) center-crops and normalizes all uploaded photos automatically.
+- **Full Content Management System (CMS)**:
+  - **Profile Management**: Update full name, email, username, avatar photo, and security password.
+  - **Site Settings**: Manage site titles, SEO meta tags, bio, contact info, and map embed HTML.
+  - **Project Management**: Add, edit, reorder, feature, and delete portfolio projects.
+  - **Skill Management**: Manage technical skills, categories, proficiency levels, and FontAwesome icons.
+  - **Experience & Education**: Update job roles, companies, degrees, dates, and milestone points.
+  - **Services & Social Links**: Manage offered services and active social media links.
+  - **Messages Inbox**: View, organize, and reply directly to contact form submissions.
+  - **Resume Uploader**: Upload and replace the active downloadable resume PDF file.
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+---
 
-## Setup
+## 🛠️ Technology Stack
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+| Layer | Technology |
+|---|---|
+| **Backend Framework** | [CodeIgniter 4.x](https://codeigniter.com) |
+| **Programming Language** | PHP 8.2+ |
+| **Database** | MySQL / MariaDB |
+| **Frontend Styling** | Custom Vanilla CSS (Variables System), Bootstrap 5.3 |
+| **Typography** | Plus Jakarta Sans, Poppins, Inter (Google Fonts) |
+| **Iconography** | FontAwesome 6 |
+| **Image Processing** | Cropper.js (Client) + CodeIgniter 4 GD Image Handler (Server) |
+| **Asynchronous JS** | jQuery 3.7 + AJAX |
 
-## Important Change with index.php
+---
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+## 📂 Project Structure Overview
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+```text
+portfolio/
+├── app/
+│   ├── Config/              # CI4 App & Database configuration
+│   ├── Controllers/
+│   │   ├── Home.php         # Public website controller & AJAX contact handler
+│   │   └── Admin/           # Admin modules (Profile, Settings, Projects, etc.)
+│   ├── Database/
+│   │   ├── Migrations/      # Database table migrations
+│   │   └── Seeds/           # PortfolioSeeder seed data
+│   ├── Models/              # CodeIgniter Data Models
+│   └── Views/
+│       ├── home/            # Public single-page portfolio view
+│       ├── layouts/         # Main & Admin master layouts
+│       └── admin/           # Admin dashboard views & form modules
+├── public/
+│   ├── assets/
+│   │   ├── css/             # style.css (Public) & admin.css (Admin)
+│   │   ├── js/              # main.js (Public) & admin.js (Admin / Cropper)
+│   │   ├── images/          # Default profile & project assets
+│   │   └── uploads/         # Uploaded avatars, projects, and resume PDF
+│   └── index.php            # Web server entry point
+├── db_portfolio.sql         # Full SQL database export
+├── spark                    # CodeIgniter Spark CLI tool
+└── README.md                # Project documentation
+```
 
-**Please** read the user guide for a better explanation of how CI4 works!
+---
 
-## Repository Management
+## ⚡ Installation & Local Setup
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+### 1. Prerequisites
+Ensure your local development environment has:
+- **PHP 8.2** or higher with `gd`, `intl`, `mbstring`, `curl`, and `pdo_mysql` extensions enabled.
+- **MySQL / MariaDB** server.
+- **Composer** (Optional, for package updates).
+- **Laragon**, XAMPP, or WAMP stack.
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+---
 
-## Server Requirements
+### 2. Database Configuration
+1. Start your MySQL database server.
+2. Create a new MySQL database named `db_portfolio`:
+   ```sql
+   CREATE DATABASE db_portfolio CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+   ```
+3. Copy or check the configuration in your `.env` file:
+   ```env
+   database.default.hostname = localhost
+   database.default.database = db_portfolio
+   database.default.username = root
+   database.default.password = 
+   database.default.DBDriver = MySQLi
+   database.default.port = 3306
+   ```
 
-PHP version 8.2 or higher is required, with the following extensions installed:
+---
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
+### 3. Run Migrations & Seeders
+Execute the following CodeIgniter Spark commands in your terminal to create the database schema and populate initial data:
 
-> [!WARNING]
-> - The end of life date for PHP 7.4 was November 28, 2022.
-> - The end of life date for PHP 8.0 was November 26, 2023.
-> - The end of life date for PHP 8.1 was December 31, 2025.
-> - If you are still using below PHP 8.2, you should upgrade immediately.
-> - The end of life date for PHP 8.2 will be December 31, 2026.
+```bash
+# Run database migrations
+php spark migrate
 
-Additionally, make sure that the following extensions are enabled in your PHP:
+# Seed database with initial default portfolio records
+php spark db:seed PortfolioSeeder
+```
 
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+*(Alternatively, you can import `db_portfolio.sql` directly into phpMyAdmin / MySQL CLI).*
+
+---
+
+### 4. Serve the Application
+Run the built-in development server using Spark:
+
+```bash
+php spark serve --port 8081
+```
+
+Access the website in your web browser:
+- 🌐 **Public Website**: `http://localhost:8081/`
+- 🔐 **Admin Control Panel**: `http://localhost:8081/admin/login`
+
+---
+
+## 🔐 Default Admin Login Credentials
+
+| Attribute | Credential |
+|---|---|
+| **Admin Login URL** | `http://localhost:8081/admin/login` |
+| **Username** | `admin` |
+| **Email** | `admin@rahulkumar.com` |
+| **Password** | `admin123` |
+
+*(You can update the username, email, and password anytime from the **Admin Profile** screen).*
+
+---
+
+## 📄 License & Credits
+
+Designed & Developed by **Rahul Kumar** — Senior PHP Developer & CodeIgniter Specialist.
