@@ -4,7 +4,7 @@
 
 <div class="admin-table-wrapper">
   <div class="d-flex align-items-center justify-content-between mb-4">
-    <h5 class="fw-bold mb-0 text-white"><i class="fas fa-code text-primary me-2"></i>Skills List</h5>
+    <h5 class="fw-bold mb-0"><i class="fas fa-code text-primary me-2"></i>Skills List</h5>
     <a href="<?= base_url('admin/skills/create') ?>" class="btn btn-primary"><i class="fas fa-plus me-1"></i> Add New Skill</a>
   </div>
 

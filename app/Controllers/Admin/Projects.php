@@ -53,6 +53,16 @@ class Projects extends BaseController
             $newName = $file->getRandomName();
             $file->move(FCPATH . 'assets/uploads/projects', $newName);
             $imagePath = 'assets/uploads/projects/' . $newName;
+
+            // Auto Crop & Resize Project Screenshot to 800x500
+            try {
+                $imageService = \Config\Services::image('gd');
+                $imageService->withFile(FCPATH . $imagePath)
+                             ->fit(800, 500, 'center')
+                             ->save(FCPATH . $imagePath);
+            } catch (\Throwable $e) {
+                // Log or ignore
+            }
         }
 
         $title = $this->request->getPost('title');
@@ -114,6 +124,16 @@ class Projects extends BaseController
             $newName = $file->getRandomName();
             $file->move(FCPATH . 'assets/uploads/projects', $newName);
             $imagePath = 'assets/uploads/projects/' . $newName;
+
+            // Auto Crop & Resize Project Screenshot to 800x500
+            try {
+                $imageService = \Config\Services::image('gd');
+                $imageService->withFile(FCPATH . $imagePath)
+                             ->fit(800, 500, 'center')
+                             ->save(FCPATH . $imagePath);
+            } catch (\Throwable $e) {
+                // Log or ignore
+            }
         }
 
         $title = $this->request->getPost('title');

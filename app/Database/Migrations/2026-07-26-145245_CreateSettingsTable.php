@@ -17,7 +17,7 @@ class CreateSettingsTable extends Migration
             'site_title' => [
                 'type'       => 'VARCHAR',
                 'constraint' => 255,
-                'default'    => 'Satyam Raj | Senior PHP & CodeIgniter Developer Portfolio',
+                'default'    => 'Rahul Kumar | Senior PHP & CodeIgniter Developer Portfolio',
             ],
             'meta_description' => [
                 'type' => 'TEXT',
@@ -30,7 +30,7 @@ class CreateSettingsTable extends Migration
             'owner_name' => [
                 'type'       => 'VARCHAR',
                 'constraint' => 100,
-                'default'    => 'Satyam Raj',
+                'default'    => 'Rahul Kumar',
             ],
             'profession' => [
                 'type'       => 'VARCHAR',
@@ -66,7 +66,7 @@ class CreateSettingsTable extends Migration
             'email' => [
                 'type'       => 'VARCHAR',
                 'constraint' => 100,
-                'default'    => 'satyamraj.dev@example.com',
+                'default'    => 'rahulkumar.dev@example.com',
                 'null'       => true,
             ],
             'location' => [
@@ -82,13 +82,13 @@ class CreateSettingsTable extends Migration
             'hero_image' => [
                 'type'       => 'VARCHAR',
                 'constraint' => 255,
-                'default'    => 'assets/images/hero_satyam.jpg',
+                'default'    => 'assets/images/hero_rahul.jpg',
                 'null'       => true,
             ],
             'about_image' => [
                 'type'       => 'VARCHAR',
                 'constraint' => 255,
-                'default'    => 'assets/images/about_satyam.jpg',
+                'default'    => 'assets/images/about_rahul.jpg',
                 'null'       => true,
             ],
             'updated_at' => [

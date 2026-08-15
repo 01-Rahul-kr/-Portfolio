@@ -37,7 +37,7 @@ class Resume extends BaseController
             return redirect()->back()->with('error', 'Only PDF, DOC, or DOCX files are allowed.');
         }
 
-        $fileName = 'Satyam_Raj_Resume_' . time() . '.' . $ext;
+        $fileName = 'Rahul_Kumar_Resume_' . time() . '.' . $ext;
         $file->move(FCPATH . 'assets/uploads/resume', $fileName);
 
         $fileSize = round($file->getSize() / 1024, 1) . ' KB';

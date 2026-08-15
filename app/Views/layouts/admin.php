@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +11,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <!-- Cropper.js CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css">
   <!-- Admin CSS -->
   <link rel="stylesheet" href="<?= base_url('assets/css/admin.css') ?>">
 </head>
@@ -21,7 +23,7 @@
     <div class="sidebar-header">
       <i class="fas fa-user-shield text-primary fs-4"></i>
       <a href="<?= base_url('admin/dashboard') ?>" class="sidebar-brand">
-        Satyam<span>Admin</span>
+        Rahul<span>Admin</span>
       </a>
     </div>
 
@@ -113,9 +115,12 @@
       <h2 class="admin-title mb-0"><?= esc($page_title ?? 'Dashboard') ?></h2>
 
       <div class="d-flex align-items-center gap-3">
+        <button id="theme-toggle" class="theme-toggle-btn" title="Toggle Dark/Light Mode">
+          <i class="fas fa-moon"></i>
+        </button>
         <a href="<?= base_url('admin/profile') ?>" class="admin-profile-btn">
-          <img src="<?= base_url(session()->get('avatar') ?: 'assets/images/hero_satyam.jpg') ?>" alt="Admin Avatar" class="admin-avatar">
-          <span class="d-none d-md-inline fw-semibold"><?= esc(session()->get('full_name') ?: 'Satyam Raj') ?></span>
+          <img src="<?= base_url(session()->get('avatar') ?: 'assets/images/hero_rahul.jpg') ?>" alt="Admin Avatar" class="admin-avatar">
+          <span class="d-none d-md-inline fw-semibold"><?= esc(session()->get('full_name') ?: 'Rahul Kumar') ?></span>
         </a>
       </div>
     </header>
@@ -151,9 +156,38 @@
     <?= $this->renderSection('admin_content') ?>
   </main>
 
+  <!-- Image Crop Modal -->
+  <div class="modal fade" id="imageCropModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-dark border-secondary text-white">
+        <div class="modal-header border-secondary">
+          <h5 class="modal-title fw-bold"><i class="fas fa-crop-alt text-primary me-2"></i>Crop & Resize Image</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center p-3">
+          <div style="max-height: 480px; overflow: hidden; background: #070A11; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+            <img id="cropImageTarget" src="" alt="Source Preview" style="max-width: 100%; display: block;">
+          </div>
+        </div>
+        <div class="modal-footer border-secondary justify-content-between">
+          <div class="btn-group btn-group-sm">
+            <button type="button" class="btn btn-outline-secondary" id="btnRotateLeft" title="Rotate Left"><i class="fas fa-undo"></i> Rotate</button>
+            <button type="button" class="btn btn-outline-secondary" id="btnRotateRight" title="Rotate Right"><i class="fas fa-redo"></i></button>
+            <button type="button" class="btn btn-outline-secondary" id="btnResetCrop" title="Reset Crop"><i class="fas fa-sync-alt"></i> Reset</button>
+          </div>
+          <div>
+            <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary btn-sm px-4" id="btnApplyCrop"><i class="fas fa-check me-1"></i> Apply & Crop</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
   <script src="<?= base_url('assets/js/admin.js') ?>"></script>
 </body>
 </html>

@@ -49,6 +49,16 @@ class Profile extends BaseController
             $newName = $file->getRandomName();
             $file->move(FCPATH . 'assets/uploads', $newName);
             $avatarPath = 'assets/uploads/' . $newName;
+
+            // Auto Crop & Resize Avatar to 300x300
+            try {
+                $imageService = \Config\Services::image('gd');
+                $imageService->withFile(FCPATH . $avatarPath)
+                             ->fit(300, 300, 'center')
+                             ->save(FCPATH . $avatarPath);
+            } catch (\Throwable $e) {
+                // Log or ignore if non-image/GD error
+            }
         }
 
         $updateData = [

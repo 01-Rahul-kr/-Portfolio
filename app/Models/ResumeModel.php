@@ -20,8 +20,8 @@ class ResumeModel extends Model
         $resume = $this->first();
         if (!$resume) {
             return [
-                'file_path' => 'assets/uploads/resume/Satyam_Raj_Resume.pdf',
-                'file_name' => 'Satyam_Raj_Resume.pdf',
+                'file_path' => 'assets/uploads/resume/Rahul_Kumar_Resume.pdf',
+                'file_name' => 'Rahul_Kumar_Resume.pdf',
                 'file_size' => '120 KB'
             ];
         }

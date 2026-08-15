@@ -1,4 +1,4 @@
--- CodeIgniter 4 Portfolio Database Schema for Satyam Raj
+-- CodeIgniter 4 Portfolio Database Schema for Rahul Kumar
 -- Database: `portfolio`
 
 CREATE DATABASE IF NOT EXISTS `portfolio` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
@@ -14,13 +14,13 @@ CREATE TABLE `users` (
   `email` VARCHAR(150) NOT NULL UNIQUE,
   `password` VARCHAR(255) NOT NULL,
   `full_name` VARCHAR(150) NOT NULL,
-  `avatar` VARCHAR(255) DEFAULT 'assets/images/hero_satyam.jpg',
+  `avatar` VARCHAR(255) DEFAULT 'assets/images/hero_rahul.jpg',
   `created_at` DATETIME DEFAULT CURRENT_TIMESTAMP,
   `updated_at` DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO `users` (`id`, `username`, `email`, `password`, `full_name`, `avatar`) VALUES
-(1, 'admin', 'satyamraj@example.com', '$2y$10$cgbaqUS4YMG0NbyZVuwYQ.XE4KzScicPDRxWOB6j1Eqc5u7fxrWmm', 'Satyam Raj', 'assets/images/hero_satyam.jpg');
+(1, 'admin', 'rahulkumar@example.com', '$2y$10$cgbaqUS4YMG0NbyZVuwYQ.XE4KzScicPDRxWOB6j1Eqc5u7fxrWmm', 'Rahul Kumar', 'assets/images/hero_rahul.jpg');
 
 -- --------------------------------------------------------
 -- Table structure for `settings`
@@ -28,41 +28,41 @@ INSERT INTO `users` (`id`, `username`, `email`, `password`, `full_name`, `avatar
 DROP TABLE IF EXISTS `settings`;
 CREATE TABLE `settings` (
   `id` INT AUTO_INCREMENT PRIMARY KEY,
-  `site_title` VARCHAR(255) NOT NULL DEFAULT 'Satyam Raj | Senior PHP & CodeIgniter Developer Portfolio',
+  `site_title` VARCHAR(255) NOT NULL DEFAULT 'Rahul Kumar | Senior PHP & CodeIgniter Developer Portfolio',
   `meta_description` TEXT,
   `meta_keywords` TEXT,
-  `owner_name` VARCHAR(100) NOT NULL DEFAULT 'Satyam Raj',
+  `owner_name` VARCHAR(100) NOT NULL DEFAULT 'Rahul Kumar',
   `profession` VARCHAR(150) NOT NULL DEFAULT 'PHP Developer',
   `current_company` VARCHAR(200) DEFAULT 'Suropriyo Enterprises Private Limited',
   `years_experience` INT DEFAULT 3,
   `bio` TEXT,
   `career_objective` TEXT,
   `phone` VARCHAR(50) DEFAULT '+91 98765 43210',
-  `email` VARCHAR(100) DEFAULT 'satyamraj.dev@example.com',
+  `email` VARCHAR(100) DEFAULT 'rahulkumar.dev@example.com',
   `location` VARCHAR(150) DEFAULT 'India',
   `google_map_iframe` TEXT,
-  `hero_image` VARCHAR(255) DEFAULT 'assets/images/hero_satyam.jpg',
-  `about_image` VARCHAR(255) DEFAULT 'assets/images/about_satyam.jpg',
+  `hero_image` VARCHAR(255) DEFAULT 'assets/images/hero_rahul.jpg',
+  `about_image` VARCHAR(255) DEFAULT 'assets/images/about_rahul.jpg',
   `updated_at` DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO `settings` (`id`, `site_title`, `meta_description`, `meta_keywords`, `owner_name`, `profession`, `current_company`, `years_experience`, `bio`, `career_objective`, `phone`, `email`, `location`, `google_map_iframe`, `hero_image`, `about_image`) VALUES
 (1, 
-'Satyam Raj | PHP Developer Portfolio', 
-'Portfolio of Satyam Raj, a passionate Software Engineer and PHP Developer specializing in CodeIgniter 4, MySQL, REST APIs, Bootstrap 5, and modern web application development.', 
-'Satyam Raj, PHP Developer, CodeIgniter 4 Developer, Web Application Developer, Software Engineer, Portfolio, CodeIgniter', 
-'Satyam Raj', 
+'Rahul Kumar | PHP Developer Portfolio', 
+'Portfolio of Rahul Kumar, a passionate Software Engineer and PHP Developer specializing in CodeIgniter 4, MySQL, REST APIs, Bootstrap 5, and modern web application development.', 
+'Rahul Kumar, PHP Developer, CodeIgniter 4 Developer, Web Application Developer, Software Engineer, Portfolio, CodeIgniter', 
+'Rahul Kumar', 
 'PHP Developer', 
 'Suropriyo Enterprises Private Limited', 
 3, 
 'Passionate Software Developer with extensive experience in building scalable web applications using CodeIgniter, PHP 8+, MySQL, JavaScript, and Bootstrap 5.', 
 'Passionate Software Developer with experience in PHP development and modern web technologies. Skilled in developing scalable web applications using CodeIgniter, PHP, MySQL, JavaScript, Bootstrap, and REST APIs. Looking to build innovative digital solutions with clean architecture and excellent user experience.', 
 '+91 98765 43210', 
-'satyamraj.dev@example.com', 
+'rahulkumar.dev@example.com', 
 'Kolkata / Bihar, India', 
 '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.123456789!2d88.3639!3d22.5726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0277a1a2b3c4d5%3A0x123456789abcdef!2sKolkata!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>', 
-'assets/images/hero_satyam.jpg', 
-'assets/images/about_satyam.jpg');
+'assets/images/hero_rahul.jpg', 
+'assets/images/about_rahul.jpg');
 
 -- --------------------------------------------------------
 -- Table structure for `skills`
@@ -191,14 +191,14 @@ INSERT INTO `services` (`title`, `icon`, `description`, `sort_order`) VALUES
 DROP TABLE IF EXISTS `resume`;
 CREATE TABLE `resume` (
   `id` INT AUTO_INCREMENT PRIMARY KEY,
-  `file_path` VARCHAR(255) NOT NULL DEFAULT 'assets/uploads/resume/Satyam_Raj_Resume.pdf',
-  `file_name` VARCHAR(150) NOT NULL DEFAULT 'Satyam_Raj_Resume.pdf',
+  `file_path` VARCHAR(255) NOT NULL DEFAULT 'assets/uploads/resume/Rahul_Kumar_Resume.pdf',
+  `file_name` VARCHAR(150) NOT NULL DEFAULT 'Rahul_Kumar_Resume.pdf',
   `file_size` VARCHAR(50) DEFAULT '120 KB',
   `updated_at` DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO `resume` (`id`, `file_path`, `file_name`, `file_size`) VALUES
-(1, 'assets/uploads/resume/Satyam_Raj_Resume.pdf', 'Satyam_Raj_Resume.pdf', '120 KB');
+(1, 'assets/uploads/resume/Rahul_Kumar_Resume.pdf', 'Rahul_Kumar_Resume.pdf', '120 KB');
 
 -- --------------------------------------------------------
 -- Table structure for `social_links`
@@ -216,10 +216,10 @@ CREATE TABLE `social_links` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO `social_links` (`platform`, `url`, `icon`, `is_active`, `sort_order`) VALUES
-('LinkedIn', 'https://linkedin.com/in/satyam-raj', 'fab fa-linkedin-in', 1, 1),
-('GitHub', 'https://github.com/satyamraj', 'fab fa-github', 1, 2),
-('Instagram', 'https://instagram.com/satyamraj', 'fab fa-instagram', 1, 3),
-('Email', 'mailto:satyamraj.dev@example.com', 'fas fa-envelope', 1, 4);
+('LinkedIn', 'https://linkedin.com/in/rahul-kumar', 'fab fa-linkedin-in', 1, 1),
+('GitHub', 'https://github.com/rahulkumar', 'fab fa-github', 1, 2),
+('Instagram', 'https://instagram.com/rahulkumar', 'fab fa-instagram', 1, 3),
+('Email', 'mailto:rahulkumar.dev@example.com', 'fas fa-envelope', 1, 4);
 
 -- --------------------------------------------------------
 -- Table structure for `messages`
@@ -237,4 +237,4 @@ CREATE TABLE `messages` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO `messages` (`name`, `email`, `phone`, `subject`, `message`, `is_read`, `created_at`) VALUES
-('John Doe', 'john.doe@example.com', '+1 555-0199', 'Project Inquiry for CI4 Web App', 'Hi Satyam, I saw your portfolio and impressive CodeIgniter 4 skills. We have a web project requirement and would like to discuss.', 0, NOW());
+('John Doe', 'john.doe@example.com', '+1 555-0199', 'Project Inquiry for CI4 Web App', 'Hi Rahul, I saw your portfolio and impressive CodeIgniter 4 skills. We have a web project requirement and would like to discuss.', 0, NOW());

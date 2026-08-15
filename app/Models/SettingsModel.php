@@ -25,21 +25,21 @@ class SettingsModel extends Model
         $settings = $this->first();
         if (!$settings) {
             return [
-                'site_title' => 'Satyam Raj | PHP Developer Portfolio',
-                'meta_description' => 'Portfolio of Satyam Raj, PHP Developer & CodeIgniter 4 Specialist.',
-                'meta_keywords' => 'Satyam Raj, PHP Developer, CodeIgniter 4',
-                'owner_name' => 'Satyam Raj',
+                'site_title' => 'Rahul Kumar | PHP Developer Portfolio',
+                'meta_description' => 'Portfolio of Rahul Kumar, PHP Developer & CodeIgniter 4 Specialist.',
+                'meta_keywords' => 'Rahul Kumar, PHP Developer, CodeIgniter 4',
+                'owner_name' => 'Rahul Kumar',
                 'profession' => 'PHP Developer',
                 'current_company' => 'Suropriyo Enterprises Private Limited',
                 'years_experience' => 3,
                 'bio' => 'Passionate Software Developer with experience in PHP development and modern web technologies.',
                 'career_objective' => 'Passionate Software Developer with experience in PHP development and modern web technologies. Skilled in developing scalable web applications using CodeIgniter, PHP, MySQL, JavaScript, Bootstrap, and REST APIs.',
                 'phone' => '+91 98765 43210',
-                'email' => 'satyamraj.dev@example.com',
+                'email' => 'rahulkumar.dev@example.com',
                 'location' => 'India',
                 'google_map_iframe' => '',
-                'hero_image' => 'assets/images/hero_satyam.jpg',
-                'about_image' => 'assets/images/about_satyam.jpg'
+                'hero_image' => 'assets/images/hero_rahul.jpg',
+                'about_image' => 'assets/images/about_rahul.jpg'
             ];
         }
         return $settings;

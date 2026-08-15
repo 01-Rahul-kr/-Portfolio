@@ -1,4 +1,4 @@
-/* Satyam Raj Portfolio Main JavaScript */
+/* Rahul Kumar Portfolio Main JavaScript */
 
 $(document).ready(function () {
   // 1. Dark / Light Mode Toggle

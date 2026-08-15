@@ -4,7 +4,7 @@
 
 <div class="admin-table-wrapper max-w-800">
   <div class="d-flex align-items-center justify-content-between mb-4">
-    <h5 class="fw-bold mb-0 text-white"><i class="fas fa-plus-circle text-primary me-2"></i>Add Experience Record</h5>
+    <h5 class="fw-bold mb-0"><i class="fas fa-plus-circle text-primary me-2"></i>Add Experience Record</h5>
     <a href="<?= base_url('admin/experience') ?>" class="btn btn-outline-secondary btn-sm"><i class="fas fa-arrow-left me-1"></i> Back</a>
   </div>
 
@@ -13,38 +13,38 @@
 
     <div class="row g-3">
       <div class="col-md-6">
-        <label class="form-label text-muted small">Job Title *</label>
-        <input type="text" name="job_title" class="form-control bg-dark text-white border-secondary" placeholder="PHP Developer" value="<?= old('job_title') ?>" required>
+        <label class="form-label">Job Title *</label>
+        <input type="text" name="job_title" class="form-control" placeholder="PHP Developer" value="<?= old('job_title') ?>" required>
       </div>
 
       <div class="col-md-6">
-        <label class="form-label text-muted small">Company Name *</label>
-        <input type="text" name="company" class="form-control bg-dark text-white border-secondary" placeholder="Suropriyo Enterprises Private Limited" value="<?= old('company') ?>" required>
+        <label class="form-label">Company Name *</label>
+        <input type="text" name="company" class="form-control" placeholder="Suropriyo Enterprises Private Limited" value="<?= old('company') ?>" required>
       </div>
 
       <div class="col-md-4">
-        <label class="form-label text-muted small">Location</label>
-        <input type="text" name="location" class="form-control bg-dark text-white border-secondary" placeholder="India" value="<?= old('location', 'West Bengal, India') ?>">
+        <label class="form-label">Location</label>
+        <input type="text" name="location" class="form-control" placeholder="India" value="<?= old('location', 'West Bengal, India') ?>">
       </div>
 
       <div class="col-md-4">
-        <label class="form-label text-muted small">Start Date *</label>
-        <input type="text" name="start_date" class="form-control bg-dark text-white border-secondary" placeholder="2023" value="<?= old('start_date') ?>" required>
+        <label class="form-label">Start Date *</label>
+        <input type="text" name="start_date" class="form-control" placeholder="2023" value="<?= old('start_date') ?>" required>
       </div>
 
       <div class="col-md-4">
-        <label class="form-label text-muted small">End Date</label>
-        <input type="text" name="end_date" class="form-control bg-dark text-white border-secondary" placeholder="Present" value="<?= old('end_date', 'Present') ?>">
+        <label class="form-label">End Date</label>
+        <input type="text" name="end_date" class="form-control" placeholder="Present" value="<?= old('end_date', 'Present') ?>">
       </div>
 
       <div class="col-12">
-        <label class="form-label text-muted small">Responsibilities (Pipe-separated | for bullet points) *</label>
-        <textarea name="responsibilities" class="form-control bg-dark text-white border-secondary" rows="4" placeholder="Developing Web Applications|Bug Fixing|Database Design|API Integration|Code Optimization|MVC Development" required><?= old('responsibilities') ?></textarea>
+        <label class="form-label">Responsibilities (Pipe-separated | for bullet points) *</label>
+        <textarea name="responsibilities" class="form-control" rows="4" placeholder="Developing Web Applications|Bug Fixing|Database Design|API Integration|Code Optimization|MVC Development" required><?= old('responsibilities') ?></textarea>
       </div>
 
       <div class="col-md-6">
-        <label class="form-label text-muted small">Sort Order</label>
-        <input type="number" name="sort_order" class="form-control bg-dark text-white border-secondary" value="1">
+        <label class="form-label">Sort Order</label>
+        <input type="number" name="sort_order" class="form-control" value="1">
       </div>
 
       <div class="col-md-6 d-flex align-items-center mt-4">

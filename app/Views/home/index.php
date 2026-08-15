@@ -12,7 +12,7 @@
         <div class="hero-content">
           <h5><i class="fas fa-terminal me-2"></i>Hello & Welcome</h5>
           <h1 class="hero-title">
-            Hi, I'm <span class="text-white"><?= esc($settings['owner_name'] ?? 'Satyam Raj') ?></span><br>
+            Hi, I'm <span class="hero-name"><?= esc($settings['owner_name'] ?? 'Rahul Kumar') ?></span><br>
             <span class="typed-text"></span>
           </h1>
           <p class="hero-subtitle">
@@ -42,7 +42,7 @@
 
       <div class="col-lg-5 text-center mt-5 mt-lg-0" data-aos="fade-left" data-aos-duration="1000">
         <div class="hero-image-wrapper">
-          <img src="<?= base_url($settings['hero_image'] ?? 'assets/images/hero_satyam.jpg') ?>" alt="Satyam Raj - PHP Developer" class="hero-img">
+          <img src="<?= base_url($settings['hero_image'] ?? 'assets/images/hero_rahul.jpg') ?>" alt="Rahul Kumar - PHP Developer" class="hero-img">
           
           <div class="experience-badge">
             <div class="badge-number"><?= esc($settings['years_experience'] ?? 3) ?>+</div>
@@ -57,7 +57,7 @@
 <!-- ==========================================
      2. ABOUT SECTION
      ========================================== -->
-<section id="about" class="py-5" style="background: var(--body-bg);">
+<section id="about" class="py-5">
   <div class="container py-5">
     <div class="section-header" data-aos="fade-up">
       <span class="section-subtitle">Get To Know Me</span>
@@ -67,7 +67,7 @@
     <div class="row align-items-center g-5">
       <div class="col-lg-5" data-aos="fade-right">
         <div class="position-relative">
-          <img src="<?= base_url($settings['about_image'] ?? 'assets/images/about_satyam.jpg') ?>" alt="About Satyam Raj" class="about-image shadow-lg">
+          <img src="<?= base_url($settings['about_image'] ?? 'assets/images/about_rahul.jpg') ?>" alt="About Rahul Kumar" class="about-image shadow-lg">
         </div>
       </div>
 
@@ -83,7 +83,7 @@
               <div class="info-icon"><i class="fas fa-building"></i></div>
               <div>
                 <span class="d-block text-muted small">Current Company</span>
-                <strong class="text-white"><?= esc($settings['current_company'] ?? 'Suropriyo Enterprises Private Limited') ?></strong>
+                <strong><?= esc($settings['current_company'] ?? 'Suropriyo Enterprises Private Limited') ?></strong>
               </div>
             </div>
           </div>
@@ -93,7 +93,7 @@
               <div class="info-icon"><i class="fas fa-briefcase"></i></div>
               <div>
                 <span class="d-block text-muted small">Experience</span>
-                <strong class="text-white"><?= esc($settings['years_experience'] ?? 3) ?>+ Years Professional</strong>
+                <strong><?= esc($settings['years_experience'] ?? 3) ?>+ Years Professional</strong>
               </div>
             </div>
           </div>
@@ -103,7 +103,7 @@
               <div class="info-icon"><i class="fas fa-graduation-cap"></i></div>
               <div>
                 <span class="d-block text-muted small">Qualification</span>
-                <strong class="text-white">B.Tech in Computer Science</strong>
+                <strong>B.Tech in Computer Science</strong>
               </div>
             </div>
           </div>
@@ -113,20 +113,20 @@
               <div class="info-icon"><i class="fas fa-envelope"></i></div>
               <div>
                 <span class="d-block text-muted small">Email Address</span>
-                <strong class="text-white"><?= esc($settings['email'] ?? 'satyamraj.dev@example.com') ?></strong>
+                <strong><?= esc($settings['email'] ?? 'rahulkumar.dev@example.com') ?></strong>
               </div>
             </div>
           </div>
         </div>
 
         <div class="custom-card p-4">
-          <h5 class="mb-3 text-white"><i class="fas fa-award text-accent me-2"></i>Key Technical Strengths</h5>
+          <h5 class="mb-3"><i class="fas fa-award text-accent me-2"></i>Key Technical Strengths</h5>
           <div class="d-flex flex-wrap gap-2">
-            <span class="badge bg-dark border text-light p-2"><i class="fas fa-check text-success me-1"></i> Clean MVC Code</span>
-            <span class="badge bg-dark border text-light p-2"><i class="fas fa-check text-success me-1"></i> Scalable DB Schema</span>
-            <span class="badge bg-dark border text-light p-2"><i class="fas fa-check text-success me-1"></i> REST API Development</span>
-            <span class="badge bg-dark border text-light p-2"><i class="fas fa-check text-success me-1"></i> Performance Optimization</span>
-            <span class="badge bg-dark border text-light p-2"><i class="fas fa-check text-success me-1"></i> Bug Diagnosis & Fixing</span>
+            <span class="strength-badge"><i class="fas fa-check text-success me-1"></i> Clean MVC Code</span>
+            <span class="strength-badge"><i class="fas fa-check text-success me-1"></i> Scalable DB Schema</span>
+            <span class="strength-badge"><i class="fas fa-check text-success me-1"></i> REST API Development</span>
+            <span class="strength-badge"><i class="fas fa-check text-success me-1"></i> Performance Optimization</span>
+            <span class="strength-badge"><i class="fas fa-check text-success me-1"></i> Bug Diagnosis & Fixing</span>
           </div>
         </div>
       </div>
@@ -137,7 +137,7 @@
 <!-- ==========================================
      3. SKILLS SECTION
      ========================================== -->
-<section id="skills" class="py-5" style="background: rgba(15, 23, 42, 0.4);">
+<section id="skills" class="py-5 section-alt">
   <div class="container py-5">
     <div class="section-header" data-aos="fade-up">
       <span class="section-subtitle">Technical Proficiency</span>
@@ -183,7 +183,7 @@
             <div class="timeline-dot"></div>
             <div class="timeline-content">
               <span class="timeline-date"><i class="far fa-calendar-alt me-1"></i> <?= esc($exp['start_date']) ?> - <?= esc($exp['end_date']) ?></span>
-              <h4 class="text-white mb-1"><?= esc($exp['job_title']) ?></h4>
+              <h4 class="mb-1"><?= esc($exp['job_title']) ?></h4>
               <h6 class="text-primary mb-3"><i class="fas fa-building me-1"></i> <?= esc($exp['company']) ?> (<?= esc($exp['location']) ?>)</h6>
               <p class="text-muted small mb-2">Key Responsibilities & Highlights:</p>
               <ul class="text-muted ps-3 mb-0">
@@ -209,7 +209,7 @@
 <!-- ==========================================
      5. EDUCATION SECTION
      ========================================== -->
-<section id="education" class="py-5" style="background: rgba(15, 23, 42, 0.4);">
+<section id="education" class="py-5 section-alt">
   <div class="container py-5">
     <div class="section-header" data-aos="fade-up">
       <span class="section-subtitle">Academic Qualifications</span>
@@ -223,7 +223,7 @@
             <div class="timeline-dot"></div>
             <div class="timeline-content">
               <span class="timeline-date"><i class="fas fa-graduation-cap me-1"></i> <?= esc($edu['passing_year']) ?></span>
-              <h4 class="text-white mb-1"><?= esc($edu['degree']) ?></h4>
+              <h4 class="mb-1"><?= esc($edu['degree']) ?></h4>
               <h6 class="text-accent mb-2"><?= esc($edu['field_of_study']) ?></h6>
               <p class="text-muted mb-2"><i class="fas fa-university me-1"></i> <?= esc($edu['institution']) ?></p>
               <?php if (!empty($edu['grade_score'])): ?>
@@ -279,7 +279,7 @@
                 <div class="mb-2">
                   <span class="badge bg-primary text-uppercase" style="font-size: 0.75rem;"><?= esc($project['category']) ?></span>
                 </div>
-                <h4 class="text-white mb-2"><?= esc($project['title']) ?></h4>
+                <h4 class="mb-2"><?= esc($project['title']) ?></h4>
                 <p class="text-muted small mb-3"><?= esc($project['description']) ?></p>
 
                 <div>
@@ -306,7 +306,7 @@
 <!-- ==========================================
      7. SERVICES SECTION
      ========================================== -->
-<section id="services" class="py-5" style="background: rgba(15, 23, 42, 0.4);">
+<section id="services" class="py-5 section-alt">
   <div class="container py-5">
     <div class="section-header" data-aos="fade-up">
       <span class="section-subtitle">What I Offer</span>
@@ -321,7 +321,7 @@
               <div class="service-icon">
                 <i class="<?= esc($service['icon']) ?>"></i>
               </div>
-              <h4 class="text-white mb-3"><?= esc($service['title']) ?></h4>
+              <h4 class="mb-3"><?= esc($service['title']) ?></h4>
               <p class="text-muted small mb-0"><?= esc($service['description']) ?></p>
             </div>
           </div>
@@ -347,7 +347,7 @@
           <div class="mb-4">
             <i class="fas fa-file-pdf text-danger display-1"></i>
           </div>
-          <h3 class="text-white mb-2"><?= esc($settings['owner_name'] ?? 'Satyam Raj') ?> - Curriculum Vitae</h3>
+          <h3 class="mb-2"><?= esc($settings['owner_name'] ?? 'Rahul Kumar') ?> - Curriculum Vitae</h3>
           <p class="text-muted mb-4">
             Download my comprehensive resume for detailed information on work history, tech stack proficiency, projects, and educational credentials.
           </p>
@@ -365,7 +365,7 @@
 <!-- ==========================================
      9. CONTACT SECTION
      ========================================== -->
-<section id="contact" class="py-5" style="background: rgba(15, 23, 42, 0.6);">
+<section id="contact" class="py-5 section-alt">
   <div class="container py-5">
     <div class="section-header" data-aos="fade-up">
       <span class="section-subtitle">Let's Connect</span>
@@ -374,13 +374,13 @@
 
     <div class="row g-5">
       <div class="col-lg-5" data-aos="fade-right">
-        <h4 class="text-white mb-4">Get In Touch</h4>
+        <h4 class="mb-4">Get In Touch</h4>
 
         <div class="contact-info-card">
           <div class="info-icon"><i class="fas fa-envelope"></i></div>
           <div>
             <span class="d-block text-muted small">Email Address</span>
-            <strong class="text-white"><?= esc($settings['email'] ?? 'satyamraj.dev@example.com') ?></strong>
+            <strong><?= esc($settings['email'] ?? 'rahulkumar.dev@example.com') ?></strong>
           </div>
         </div>
 
@@ -388,7 +388,7 @@
           <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
           <div>
             <span class="d-block text-muted small">Phone / Mobile</span>
-            <strong class="text-white"><?= esc($settings['phone'] ?? '+91 98765 43210') ?></strong>
+            <strong><?= esc($settings['phone'] ?? '+91 98765 43210') ?></strong>
           </div>
         </div>
 
@@ -396,7 +396,7 @@
           <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
           <div>
             <span class="d-block text-muted small">Location</span>
-            <strong class="text-white"><?= esc($settings['location'] ?? 'India') ?></strong>
+            <strong><?= esc($settings['location'] ?? 'India') ?></strong>
           </div>
         </div>
 
@@ -412,7 +412,7 @@
 
       <div class="col-lg-7" data-aos="fade-left">
         <div class="custom-card p-4 p-md-5">
-          <h4 class="text-white mb-4"><i class="fas fa-paper-plane text-primary me-2"></i>Send A Message</h4>
+          <h4 class="mb-4"><i class="fas fa-paper-plane text-primary me-2"></i>Send A Message</h4>
 
           <div id="contact-alert" class="alert p-3 mb-4" role="alert"></div>
 

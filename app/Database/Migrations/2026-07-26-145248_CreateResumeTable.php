@@ -17,12 +17,12 @@ class CreateResumeTable extends Migration
             'file_path' => [
                 'type'       => 'VARCHAR',
                 'constraint' => 255,
-                'default'    => 'assets/uploads/resume/Satyam_Raj_Resume.pdf',
+                'default'    => 'assets/uploads/resume/Rahul_Kumar_Resume.pdf',
             ],
             'file_name' => [
                 'type'       => 'VARCHAR',
                 'constraint' => 150,
-                'default'    => 'Satyam_Raj_Resume.pdf',
+                'default'    => 'Rahul_Kumar_Resume.pdf',
             ],
             'file_size' => [
                 'type'       => 'VARCHAR',
