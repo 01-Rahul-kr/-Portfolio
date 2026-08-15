@@ -48,6 +48,16 @@ class Settings extends BaseController
             $newName = $heroFile->getRandomName();
             $heroFile->move(FCPATH . 'assets/uploads', $newName);
             $heroImagePath = 'assets/uploads/' . $newName;
+
+            // Auto Crop & Resize Hero Image to 800x800
+            try {
+                $imageService = \Config\Services::image('gd');
+                $imageService->withFile(FCPATH . $heroImagePath)
+                             ->fit(800, 800, 'center')
+                             ->save(FCPATH . $heroImagePath);
+            } catch (\Throwable $e) {
+                // Log or ignore
+            }
         }
 
         $aboutImagePath = $settings['about_image'];
@@ -56,6 +66,16 @@ class Settings extends BaseController
             $newName = $aboutFile->getRandomName();
             $aboutFile->move(FCPATH . 'assets/uploads', $newName);
             $aboutImagePath = 'assets/uploads/' . $newName;
+
+            // Auto Crop & Resize About Image to 800x800
+            try {
+                $imageService = \Config\Services::image('gd');
+                $imageService->withFile(FCPATH . $aboutImagePath)
+                             ->fit(800, 800, 'center')
+                             ->save(FCPATH . $aboutImagePath);
+            } catch (\Throwable $e) {
+                // Log or ignore
+            }
         }
 
         $updateData = [

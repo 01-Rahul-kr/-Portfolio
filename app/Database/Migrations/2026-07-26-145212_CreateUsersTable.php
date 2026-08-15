@@ -33,7 +33,7 @@ class CreateUsersTable extends Migration
             'avatar' => [
                 'type'       => 'VARCHAR',
                 'constraint' => 255,
-                'default'    => 'assets/images/hero_satyam.jpg',
+                'default'    => 'assets/images/hero_rahul.jpg',
             ],
             'created_at' => [
                 'type' => 'DATETIME',

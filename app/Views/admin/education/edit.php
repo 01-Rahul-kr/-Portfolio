@@ -4,7 +4,7 @@
 
 <div class="admin-table-wrapper max-w-800">
   <div class="d-flex align-items-center justify-content-between mb-4">
-    <h5 class="fw-bold mb-0 text-white"><i class="fas fa-edit text-warning me-2"></i>Edit Education #<?= esc($education['id']) ?></h5>
+    <h5 class="fw-bold mb-0"><i class="fas fa-edit text-warning me-2"></i>Edit Education #<?= esc($education['id']) ?></h5>
     <a href="<?= base_url('admin/education') ?>" class="btn btn-outline-secondary btn-sm"><i class="fas fa-arrow-left me-1"></i> Back</a>
   </div>
 
@@ -13,38 +13,38 @@
 
     <div class="row g-3">
       <div class="col-md-6">
-        <label class="form-label text-muted small">Degree / Certificate *</label>
-        <input type="text" name="degree" class="form-control bg-dark text-white border-secondary" value="<?= esc($education['degree']) ?>" required>
+        <label class="form-label">Degree / Certificate *</label>
+        <input type="text" name="degree" class="form-control" value="<?= esc($education['degree']) ?>" required>
       </div>
 
       <div class="col-md-6">
-        <label class="form-label text-muted small">Field of Study *</label>
-        <input type="text" name="field_of_study" class="form-control bg-dark text-white border-secondary" value="<?= esc($education['field_of_study']) ?>" required>
+        <label class="form-label">Field of Study *</label>
+        <input type="text" name="field_of_study" class="form-control" value="<?= esc($education['field_of_study']) ?>" required>
       </div>
 
       <div class="col-md-6">
-        <label class="form-label text-muted small">Institution / University *</label>
-        <input type="text" name="institution" class="form-control bg-dark text-white border-secondary" value="<?= esc($education['institution']) ?>" required>
+        <label class="form-label">Institution / University *</label>
+        <input type="text" name="institution" class="form-control" value="<?= esc($education['institution']) ?>" required>
       </div>
 
       <div class="col-md-3">
-        <label class="form-label text-muted small">Passing Year *</label>
-        <input type="text" name="passing_year" class="form-control bg-dark text-white border-secondary" value="<?= esc($education['passing_year']) ?>" required>
+        <label class="form-label">Passing Year *</label>
+        <input type="text" name="passing_year" class="form-control" value="<?= esc($education['passing_year']) ?>" required>
       </div>
 
       <div class="col-md-3">
-        <label class="form-label text-muted small">Grade / Score</label>
-        <input type="text" name="grade_score" class="form-control bg-dark text-white border-secondary" value="<?= esc($education['grade_score']) ?>">
+        <label class="form-label">Grade / Score</label>
+        <input type="text" name="grade_score" class="form-control" value="<?= esc($education['grade_score']) ?>">
       </div>
 
       <div class="col-12">
-        <label class="form-label text-muted small">Description / Coursework</label>
-        <textarea name="description" class="form-control bg-dark text-white border-secondary" rows="3"><?= esc($education['description']) ?></textarea>
+        <label class="form-label">Description / Coursework</label>
+        <textarea name="description" class="form-control" rows="3"><?= esc($education['description']) ?></textarea>
       </div>
 
       <div class="col-md-6">
-        <label class="form-label text-muted small">Sort Order</label>
-        <input type="number" name="sort_order" class="form-control bg-dark text-white border-secondary" value="<?= esc($education['sort_order']) ?>">
+        <label class="form-label">Sort Order</label>
+        <input type="number" name="sort_order" class="form-control" value="<?= esc($education['sort_order']) ?>">
       </div>
 
       <div class="col-12 mt-4">

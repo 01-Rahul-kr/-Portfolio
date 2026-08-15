@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><?= esc($settings['site_title'] ?? 'Satyam Raj | Senior PHP & CodeIgniter Developer Portfolio') ?></title>
+  <title><?= esc($settings['site_title'] ?? 'Rahul Kumar | Senior PHP & CodeIgniter Developer Portfolio') ?></title>
   
   <!-- SEO & Meta Tags -->
-  <meta name="description" content="<?= esc($settings['meta_description'] ?? 'Portfolio of Satyam Raj, a passionate Software Engineer and PHP Developer specializing in CodeIgniter 4, MySQL, REST APIs, Bootstrap 5, and modern web application development.') ?>">
-  <meta name="keywords" content="<?= esc($settings['meta_keywords'] ?? 'Satyam Raj, PHP Developer, CodeIgniter 4 Developer, Web Application Developer, Software Engineer, Portfolio, CodeIgniter') ?>">
-  <meta name="author" content="Satyam Raj">
+  <meta name="description" content="<?= esc($settings['meta_description'] ?? 'Portfolio of Rahul Kumar, a passionate Software Engineer and PHP Developer specializing in CodeIgniter 4, MySQL, REST APIs, Bootstrap 5, and modern web application development.') ?>">
+  <meta name="keywords" content="<?= esc($settings['meta_keywords'] ?? 'Rahul Kumar, PHP Developer, CodeIgniter 4 Developer, Web Application Developer, Software Engineer, Portfolio, CodeIgniter') ?>">
+  <meta name="author" content="Rahul Kumar">
 
   <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="<?= esc($settings['site_title'] ?? 'Satyam Raj | PHP Developer Portfolio') ?>">
-  <meta property="og:description" content="<?= esc($settings['meta_description'] ?? 'Explore portfolio and projects by Satyam Raj - Software Engineer & CodeIgniter Developer.') ?>">
+  <meta property="og:title" content="<?= esc($settings['site_title'] ?? 'Rahul Kumar | PHP Developer Portfolio') ?>">
+  <meta property="og:description" content="<?= esc($settings['meta_description'] ?? 'Explore portfolio and projects by Rahul Kumar - Software Engineer & CodeIgniter Developer.') ?>">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="<?= base_url($settings['hero_image'] ?? 'assets/images/hero_satyam.jpg') ?>">
+  <meta property="og:image" content="<?= base_url($settings['hero_image'] ?? 'assets/images/hero_rahul.jpg') ?>">
   <meta property="og:url" content="<?= base_url() ?>">
 
   <!-- Schema Markup (JSON-LD) -->
@@ -22,7 +22,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Satyam Raj",
+    "name": "Rahul Kumar",
     "jobTitle": "PHP Developer",
     "worksFor": {
       "@type": "Organization",
@@ -39,7 +39,7 @@
       }
     ],
     "knowsAbout": ["PHP", "CodeIgniter 4", "MySQL", "JavaScript", "Bootstrap 5", "REST APIs", "Web Development"],
-    "email": "mailto:<?= esc($settings['email'] ?? 'satyamraj.dev@example.com') ?>",
+    "email": "mailto:<?= esc($settings['email'] ?? 'rahulkumar.dev@example.com') ?>",
     "url": "<?= base_url() ?>"
   }
   </script>
@@ -67,10 +67,10 @@
   <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
     <div class="container">
       <a class="navbar-brand" href="<?= base_url() ?>">
-        <i class="fas fa-code text-primary"></i> Satyam<span class="logo-highlight">Raj</span>
+        <i class="fas fa-code text-primary"></i> Rahul<span class="logo-highlight">Kumar</span>
       </a>
 
-      <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#portfolioNavbar">
+      <button class="navbar-toggler navbar-toggler-custom border-0" type="button" data-bs-toggle="collapse" data-bs-target="#portfolioNavbar">
         <i class="fas fa-bars fs-4"></i>
       </button>
 
@@ -110,7 +110,7 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-6 text-md-start mb-3 mb-md-0">
-          <h5 class="mb-1 text-white"><i class="fas fa-code text-primary"></i> Satyam Raj</h5>
+          <h5 class="mb-1"><i class="fas fa-code text-primary"></i> Rahul Kumar</h5>
           <p class="small mb-0 text-muted">PHP Developer & CodeIgniter Specialist @ <?= esc($settings['current_company'] ?? 'Suropriyo Enterprises Private Limited') ?></p>
         </div>
         <div class="col-md-6 text-md-end">
@@ -128,7 +128,7 @@
       <hr class="my-4" style="border-color: var(--card-border);">
       <div class="row">
         <div class="col-12 text-center text-muted small">
-          &copy; <?= date('Y') ?> Satyam Raj. All rights reserved. Crafted with <i class="fas fa-heart text-danger"></i> using CodeIgniter 4.
+          &copy; <?= date('Y') ?> Rahul Kumar. All rights reserved. Crafted with <i class="fas fa-heart text-danger"></i> using CodeIgniter 4.
         </div>
       </div>
     </div>

@@ -13,10 +13,10 @@ class PortfolioSeeder extends Seeder
         $this->db->table('users')->insert([
             'id'         => 1,
             'username'   => 'admin',
-            'email'      => 'satyamraj@example.com',
+            'email'      => 'rahulkumar@example.com',
             'password'   => '$2y$10$cgbaqUS4YMG0NbyZVuwYQ.XE4KzScicPDRxWOB6j1Eqc5u7fxrWmm',
-            'full_name'  => 'Satyam Raj',
-            'avatar'     => 'assets/images/hero_satyam.jpg',
+            'full_name'  => 'Rahul Kumar',
+            'avatar'     => 'assets/images/hero_rahul.jpg',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ]);
@@ -25,21 +25,21 @@ class PortfolioSeeder extends Seeder
         $this->db->table('settings')->truncate();
         $this->db->table('settings')->insert([
             'id'                => 1,
-            'site_title'        => 'Satyam Raj | PHP Developer Portfolio',
-            'meta_description'  => 'Portfolio of Satyam Raj, a passionate Software Engineer and PHP Developer specializing in CodeIgniter 4, MySQL, REST APIs, Bootstrap 5, and modern web application development.',
-            'meta_keywords'     => 'Satyam Raj, PHP Developer, CodeIgniter 4 Developer, Web Application Developer, Software Engineer, Portfolio, CodeIgniter',
-            'owner_name'        => 'Satyam Raj',
+            'site_title'        => 'Rahul Kumar | PHP Developer Portfolio',
+            'meta_description'  => 'Portfolio of Rahul Kumar, a passionate Software Engineer and PHP Developer specializing in CodeIgniter 4, MySQL, REST APIs, Bootstrap 5, and modern web application development.',
+            'meta_keywords'     => 'Rahul Kumar, PHP Developer, CodeIgniter 4 Developer, Web Application Developer, Software Engineer, Portfolio, CodeIgniter',
+            'owner_name'        => 'Rahul Kumar',
             'profession'        => 'PHP Developer',
             'current_company'   => 'Suropriyo Enterprises Private Limited',
             'years_experience'  => 3,
             'bio'               => 'Passionate Software Developer with extensive experience in building scalable web applications using CodeIgniter, PHP 8+, MySQL, JavaScript, and Bootstrap 5.',
             'career_objective'  => 'Passionate Software Developer with experience in PHP development and modern web technologies. Skilled in developing scalable web applications using CodeIgniter, PHP, MySQL, JavaScript, Bootstrap, and REST APIs. Looking to build innovative digital solutions with clean architecture and excellent user experience.',
             'phone'             => '+91 98765 43210',
-            'email'             => 'satyamraj.dev@example.com',
+            'email'             => 'rahulkumar.dev@example.com',
             'location'          => 'Kolkata / Bihar, India',
             'google_map_iframe' => '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.123456789!2d88.3639!3d22.5726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0277a1a2b3c4d5%3A0x123456789abcdef!2sKolkata!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>',
-            'hero_image'        => 'assets/images/hero_satyam.jpg',
-            'about_image'       => 'assets/images/about_satyam.jpg',
+            'hero_image'        => 'assets/images/hero_rahul.jpg',
+            'about_image'       => 'assets/images/about_rahul.jpg',
             'updated_at'        => date('Y-m-d H:i:s'),
         ]);
 
@@ -165,18 +165,18 @@ class PortfolioSeeder extends Seeder
         $this->db->table('resume')->truncate();
         $this->db->table('resume')->insert([
             'id'        => 1,
-            'file_path' => 'assets/uploads/resume/Satyam_Raj_Resume.pdf',
-            'file_name' => 'Satyam_Raj_Resume.pdf',
+            'file_path' => 'assets/uploads/resume/Rahul_Kumar_Resume.pdf',
+            'file_name' => 'Rahul_Kumar_Resume.pdf',
             'file_size' => '120 KB',
         ]);
 
         // 9. Social Links Table
         $this->db->table('social_links')->truncate();
         $this->db->table('social_links')->insertBatch([
-            ['platform' => 'LinkedIn', 'url' => 'https://linkedin.com/in/satyam-raj', 'icon' => 'fab fa-linkedin-in', 'is_active' => 1, 'sort_order' => 1],
-            ['platform' => 'GitHub', 'url' => 'https://github.com/satyamraj', 'icon' => 'fab fa-github', 'is_active' => 1, 'sort_order' => 2],
-            ['platform' => 'Instagram', 'url' => 'https://instagram.com/satyamraj', 'icon' => 'fab fa-instagram', 'is_active' => 1, 'sort_order' => 3],
-            ['platform' => 'Email', 'url' => 'mailto:satyamraj.dev@example.com', 'icon' => 'fas fa-envelope', 'is_active' => 1, 'sort_order' => 4],
+            ['platform' => 'LinkedIn', 'url' => 'https://linkedin.com/in/rahul-kumar', 'icon' => 'fab fa-linkedin-in', 'is_active' => 1, 'sort_order' => 1],
+            ['platform' => 'GitHub', 'url' => 'https://github.com/rahulkumar', 'icon' => 'fab fa-github', 'is_active' => 1, 'sort_order' => 2],
+            ['platform' => 'Instagram', 'url' => 'https://instagram.com/rahulkumar', 'icon' => 'fab fa-instagram', 'is_active' => 1, 'sort_order' => 3],
+            ['platform' => 'Email', 'url' => 'mailto:rahulkumar.dev@example.com', 'icon' => 'fas fa-envelope', 'is_active' => 1, 'sort_order' => 4],
         ]);
 
         // 10. Messages Table
@@ -186,7 +186,7 @@ class PortfolioSeeder extends Seeder
             'email'      => 'john.doe@example.com',
             'phone'      => '+1 555-0199',
             'subject'    => 'Project Inquiry for CI4 Web App',
-            'message'    => 'Hi Satyam, I saw your portfolio and impressive CodeIgniter 4 skills. We have a web project requirement and would like to discuss.',
+            'message'    => 'Hi Rahul, I saw your portfolio and impressive CodeIgniter 4 skills. We have a web project requirement and would like to discuss.',
             'is_read'    => 0,
             'created_at' => date('Y-m-d H:i:s'),
         ]);

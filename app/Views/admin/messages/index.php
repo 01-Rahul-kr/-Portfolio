@@ -4,7 +4,7 @@
 
 <div class="admin-table-wrapper">
   <div class="d-flex align-items-center justify-content-between mb-4">
-    <h5 class="fw-bold mb-0 text-white"><i class="fas fa-envelope text-primary me-2"></i>Contact Messages Inbox</h5>
+    <h5 class="fw-bold mb-0"><i class="fas fa-envelope text-primary me-2"></i>Contact Messages Inbox</h5>
   </div>
 
   <div class="table-responsive">

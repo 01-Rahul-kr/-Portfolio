@@ -4,7 +4,7 @@
 
 <div class="admin-table-wrapper">
   <div class="d-flex align-items-center justify-content-between mb-4">
-    <h5 class="fw-bold mb-0 text-white"><i class="fas fa-briefcase text-primary me-2"></i>Experience Timeline</h5>
+    <h5 class="fw-bold mb-0"><i class="fas fa-briefcase text-primary me-2"></i>Experience Timeline</h5>
     <a href="<?= base_url('admin/experience/create') ?>" class="btn btn-primary"><i class="fas fa-plus me-1"></i> Add Experience</a>
   </div>
 

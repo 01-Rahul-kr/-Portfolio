@@ -48,7 +48,7 @@
 <!-- Recent Messages Table -->
 <div class="admin-table-wrapper">
   <div class="d-flex align-items-center justify-content-between mb-3">
-    <h5 class="fw-bold mb-0 text-white"><i class="fas fa-inbox text-primary me-2"></i>Recent Contact Submissions</h5>
+    <h5 class="fw-bold mb-0"><i class="fas fa-inbox text-primary me-2"></i>Recent Contact Submissions</h5>
     <a href="<?= base_url('admin/messages') ?>" class="btn btn-sm btn-outline-primary">View All Messages</a>
   </div>
 
